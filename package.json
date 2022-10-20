@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,13 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-validator": "^6.14.2",
     "http-error": "^0.0.6",
     "jade": "^1.11.0",
     "morgan": "^1.10.0",
     "notenv": "^2.0.3",
     "passport": "^0.6.0",
+    "passport-middleware": "^1.0.5",
     "pg": "^8.8.0",
     "pg-promise": "^10.12.1"
   }
