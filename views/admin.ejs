@@ -6,8 +6,32 @@
   </head>
   <body>
      <main id="main_login_section">
-          <div id="login_port"></div>
-          <div id="login_form"></div>
+          <div id="login_port">
+            <div class="loader">
+              <div class="inner one"></div>
+              <div class="inner two"></div>
+              <div class="inner three"></div>
+            </div>
+            <div class="typed-animation">
+              <h1 class="typed-out">Welcome to ATN shop</h1>
+            </div>
+          </div>
+          <div id="login_form">
+            <h2 class="login_form_heading">Login Form</h2>
+
+<form action="/action_page.php" method="post">
+  <div class="container">
+    <input type="text" class="login_field_box" placeholder="Enter Username" name="uname" required>
+
+    <input type="password" class="login_field_box" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+</form>
+          </div>
      </main>
   </body>
 </html>
