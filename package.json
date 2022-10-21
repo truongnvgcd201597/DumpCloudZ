@@ -1,39 +1,23 @@
 {
   "name": "dumpcloudz",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "nodemon server.js"
+    "start": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/truongnvgcd201597/DumpCloudZ.git"
-  },
-  "author": "NVTRUONG",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/truongnvgcd201597/DumpCloudZ/issues"
-  },
-  "homepage": "https://github.com/truongnvgcd201597/DumpCloudZ#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "debug": "^4.3.4",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
     "express-validator": "^6.14.2",
-    "http-error": "^0.0.6",
-    "jade": "^1.11.0",
-    "morgan": "^1.10.0",
-    "notenv": "^2.0.3",
-    "passport": "^0.6.0",
-    "passport-middleware": "^1.0.5",
-    "pg": "^8.8.0",
-    "pg-promise": "^10.12.1"
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.0"
   }
 }
