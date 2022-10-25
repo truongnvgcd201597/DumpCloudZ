@@ -10,4 +10,4 @@ const pg_conn = new Pool({
         rejectUnauthorized: false
     }
 })
-module.exports = pg_conn
+module.exports = pg_conn;
