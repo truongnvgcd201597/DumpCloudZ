@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= LOGIN %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Login</title>
+</head>
+<body>
+     <main id="main_login_section">
+          <div id="login_port">
+            <div class="loader">
+              <div class="inner one"></div>
+              <div class="inner two"></div>
+              <div class="inner three"></div>
+            </div>
+            <div class="typed-animation">
+              <h1 class="typed-out">Welcome to ATN shop</h1>
+            </div>
+          </div>
+          <div id="login_form">
+            <h2 class="login_form_heading">Login Form</h2>
+
+<form action="/login" method="post">  
+  <div class="loginos_buttons">
+    <div class="close">
+    </div>
+    <div class="minimize">
+    </div>
+    <div class="zoom">
+    </div>    
+  </div>
+  <div class="container">
+                  <input type="text" id="login" class="login_field_box" name="username" placeholder="Enter Username">
+                  <input type="password" id="password" class="login_field_box" name="password" placeholder="Enter Password">
+                  <input type="submit" class="button_login" value="Login">
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div>
+              </form>
+                        </div>
+                   </main>
+                </body>
+              </html>

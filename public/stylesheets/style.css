@@ -15,7 +15,7 @@ body {
 #main_login_section {
   width: 100%;
   height: 100vh;
-  background: url("../images/login-poster.jpg");
+  background: url("../images/login-poster1.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -77,11 +77,16 @@ body {
 #login_form {
   text-align: center;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
   border-radius: 10px;
   padding: 5rem 2rem;
   margin: 2rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+#login_form:hover {
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  transition: 0.5s;
 }
 .login_form_heading {
   font-size: 2rem;
@@ -93,30 +98,41 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #87ceeb;
+  color: #fff;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   outline: none;
   background: transparent;
 }
 .login_field_box:focus {
+  transition: 0.5s;
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid limegreen;
+  color: #000;
 }
-
-button {
-  background-color: rgb(7, 42, 180);
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+.login_field_box::placeholder {
+  color: #fff;
+}
+.button_login {
+  background: #fff;
   border: none;
-  cursor: pointer;
+  outline: none;
+  padding: 14px 20px;
+  border-radius: 5px;
   width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 10px;
 }
 
-button:hover {
+.button_login:hover {
   opacity: 0.8;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .cancelbtn {
@@ -210,4 +226,97 @@ span.psw {
   100% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
+}
+.close {
+  background: #ff5c5c;
+  font-size: 9pt;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  display: inline-block;
+}
+.minimize {
+  background: #ffbd4c;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  display: inline-block;
+}
+.zoom {
+  background: #00ca56;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 6px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  display: inline-block;
+}
+.close:hover {
+  background: #e33e41;
+  cursor: pointer;
+}
+.minimize:hover {
+  background: #e09e3e;
+  cursor: pointer;
+}
+.zoom:hover {
+  background: #14ae46;
+  cursor: pointer;
+}
+.loginos_buttons {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+
+.typed-out-n {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgb(255 255 255 / 50%);
+  animation: typing 8s steps(40) infinite, blinking 1s infinite;
+}
+
+.table_form {
+  margin: 0 auto;
+}
+thead {
+  background: rgba(255, 255, 255, 0.3);
+  margin: 2rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+thead:hover {
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  transition: 0.5s;
+}
+
+.thead_product {
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+td {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+td:hover {
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  transition: 0.5s;
+  cursor: pointer;
+  color: #fff;
 }

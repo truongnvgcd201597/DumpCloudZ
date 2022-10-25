@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        width: 98%;
+  height: 100vh;
+  background: url("../images/login-poster1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+      }
+      #update_form {
+    width: 60%;
+    height: 70vh;
+    margin: 0 auto;
+    transform: translate(0%, 10%);
+    padding: 30px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-size: contain;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/007/250/114/original/atn-letter-logo-design-on-white-background-atn-creative-initials-letter-logo-concept-atn-letter-design-vector.jpg);
+}
+h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.update_form_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.update_form_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.update_form_right input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.update_form_right input:hover{
+    transition: 0.5s;
+    position: relative;
+    border-bottom: 3px solid limegreen;
+}
+.update_form_right input:focus{
+    color: #000;
+}
+.update_form_right button[type="submit"]{
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+.update_form_right button[type="submit"]:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.5);
+}
+/* label for */
+.update_form_right label{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}   
+    </style>
+</head>
+<body>
+    <div id="update_form">
+        <div class="update_form_left">
+            <span class="user-icon"></span>
+            <h1>ATN Update</h1>
+        </div>
+        <div class="update_form_right">
+    <div>
+        <%- product_detail %>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
