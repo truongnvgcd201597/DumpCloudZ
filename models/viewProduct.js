@@ -27,7 +27,7 @@ async function showProduct(shopID) {
 
     tableProductDisplay += `
     <tr>
-        <form method="POST" action="/addProduct">
+        <form method="POST" action="/add">
         <td><input type="text" name="id"></td>        
         <td><input type="text" name="name"> </td>       
         <td> <input type="text" name="price"></td>       

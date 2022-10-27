@@ -10,4 +10,9 @@ const pg_conn = new Pool({
         rejectUnauthorized: false
     }
 })
+
+pg_conn.query('SELECT * FROM product', (err, res) => {
+    console.log(err, res)
+    pg_conn.end()
+})
 module.exports = pg_conn;

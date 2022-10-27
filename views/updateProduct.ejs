@@ -70,7 +70,8 @@ h1 {
 .update_form_right input:focus{
     color: #000;
 }
-.update_form_right button[type="submit"]{
+.update_form_right button[type="submit"],
+input[type="button"]{
     background: #fff;
     border: none;
     outline: none;
@@ -84,7 +85,13 @@ h1 {
     transition: 0.5s;
     margin-bottom: 10px;
 }
-.update_form_right button[type="submit"]:hover{
+a{
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+.update_form_right button[type="submit"]:hover,
+input[type="button"]:hover{
     opacity: 0.8;
     transition: 0.5s;
     background: rgba(255, 255, 255, 0.5);

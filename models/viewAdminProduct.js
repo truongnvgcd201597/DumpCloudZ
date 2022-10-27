@@ -1,6 +1,6 @@
 const { name } = require('ejs');
 var pg_conn = require('./database');
-async function getProducts(nameShop) {
+async function viewAdminProduct(nameShop) {
     let queryProducts;
     var getEntitiesQueries;
     if (nameShop == 'all') queryProducts = {
@@ -35,4 +35,4 @@ async function getProducts(nameShop) {
     tableProductDisplay += `</table>`;
     return tableProductDisplay;
 }
-module.exports = getProducts;
+module.exports = viewAdminProduct;

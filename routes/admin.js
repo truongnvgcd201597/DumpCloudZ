@@ -1,17 +1,15 @@
 var express = require('express');
 const { routes } = require('../app');
 var router = express.Router();
-var tableProduct = require('../models/ShowProduct');
-var selectBoxShop = require('../models/showSelectBoxShop');
-var getTableSelectProduct = require('../models/getSelectedProduct');
+var selectBox = require('../models/selectBox');
+var viewAdminProduct = require('../models/viewAdminProduct');
 
-/* GET users listing. */
-router.get('/', async function (req, res, next) {
-    let listSelectShop = await selectBoxShop();
-    let tableProduct = await getTableSelectProduct('all');
+router.get('/admin', async function (req, res, next) {
+    let listSelectShop = await selectBox();
+    let viewProduct = await viewAdminProduct('all');
     let username = req.session.user.username;
     if (username) {
-        res.render('admin', { selectBox: listSelectShop, result: tableProduct })
+        res.render('admin', { selectBox: listSelectShop, result: viewProduct })
     } else {
         res.render('/login');
     }

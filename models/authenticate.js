@@ -1,21 +1,23 @@
 var pg_conn = require('./database');
 
 async function authen(user, pass) {
-    var authenticated = false;
+    var userAuthentication = false;
     var arr = [];
-    var idshop = 0;
-    var role = "shop";
+    var shopID = 0;
+    var userRole = "shop";
     const asc_query = {
-        text: "SELECT * from users where name = $1 AND passwd = $2",
+        text: "SELECT * FROM users WHERE name = $1 AND passwd = $2",
         values: [user, pass]
     };
-    var query_data = await pg_conn.query(asc_query);
-    if (query_data.rowCount == 1) {
-        authenticated = true;
-        idshop = query_data.rows[0].shop;
-        role = query_data.rows[0].role;
+    var accountQuery = await pg_conn.query(asc_query);
+    if (accountQuery.rowCount == 1) {
+        userAuthentication = true;
+        shopID = accountQuery.rows[0].shop;
+        userRole = accountQuery.rows[0].role;
     }
-    arr.push(authenticated, idshop, role)
+    arr.push(userAuthentication);
+    arr.push(shopID);
+    arr.push(userRole);
     return arr;
 }
 

@@ -1,12 +1,12 @@
 var express = require('express');
 const { routes } = require('../app');
 var router = express.Router();
-var tableProduct = require('../models/ShowProduct');
+var viewProduct = require('../models/viewProduct');
 
-router.get('/', async function (req, res, next) {
+router.get('/users', async function (req, res, next) {
   let idshop = req.session.user.shop;
   let username = req.session.user.username;
-  let productString = await tableProduct(idshop);
+  let productString = await viewProduct(idshop);
   if (username) {
     res.render('home', { name: username, products: productString });
   } else {
