@@ -1,30 +1,27 @@
-CREATE TABLE public.product (id SERIAL, name VARCHAR(50), price INT, quantity INT, shop INT);
+CREATE TABLE public.product (id INT, name VARCHAR(50), quantity INT, price INT, shop INT);
 CREATE TABLE public.shop (id INT, name VARCHAR(50), address VARCHAR(255),contact VARCHAR(255));
-CREATE TABLE public.account (id INT, username VARCHAR(50), shop VARCHAR(255),password VARCHAR(255), role varchar(100));
-
-INSERT INTO public.shop (id, name, address, contact) VALUES (1, 'Kenel Shop', '571 Ngo Quyen', '0383888888');
-INSERT INTO public.shop (id, name, address, contact) VALUES (2, 'Wall Shop', '45 Le Duan', '0383777777');
-INSERT INTO public.shop (id, name, address, contact) VALUES (3, 'Harman Shop', '123 Nguyen Van Linh', '0383777777');
-
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (1, 'Puppy', 10000, 10, 1);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (2, 'Doll', 20000, 20, 1);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (3, 'Car', 30000, 30, 1);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (4, 'Robot', 10000, 10, 2);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (5, 'Squishy', 20000, 20, 2);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (6, 'Laser', 30000, 30, 2);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (7, 'Snap Phone', 10000, 10, 3);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (8, 'Comb', 20000, 20, 3);
-INSERT INTO public.product (id, name, price, quantity, shop) VALUES (9, 'Sunglasses', 30000, 30, 3);
+CREATE TABLE public.users (id INT, name VARCHAR(50), shop INT,password VARCHAR(255), role VARCHAR(255));
 
 
-CREATE TABLE public.account (id INT, username VARCHAR(50), shop VARCHAR(255),password VARCHAR(255), role varchar(50));
-INSERT INTO public.account (id, username, shop, password, role) VALUES (1, 'kenel', 'Kenel Shop', '123456', 'seller');
-INSERT INTO public.account (id, username, shop, password, role) VALUES (2, 'wall', 'Wall Shop', '123456', 'seller');
-INSERT INTO public.account (id, username, shop, password, role) VALUES (3, 'harman', 'Harman Shop', '123456', 'seller');
-INSERT INTO public.account (id, username, shop, password, role) VALUES (4, 'admin', 'Admin', '123456', 'admin');
+INSERT INTO public.shop VALUES (1, 'ATN Tran Phu', 'Da Nang', '0123456789');
+INSERT INTO public.shop VALUES (2, 'ATN Truong Thi', 'Nghe An', '0198765432');
+INSERT INTO public.shop VALUES (3, 'ATN Hang Bai', 'Ha Noi', '018888888');
 
 
+INSERT INTO public.users VALUES(0, 'admin', 0, '123456', 'director');
+INSERT INTO public.users VALUES(1, 'atndn', 1, '654321', 'shop');
+INSERT INTO public.users VALUES(2, 'atnna', 2, 'qweasd', 'shop');
+INSERT INTO public.users VALUES(3, 'atnhn', 3, '123qwe', 'shop');
 
+INSERT INTO public.product VALUES (1, 'Doll', 10, 100, 1);
+INSERT INTO public.product VALUES (2, 'Car', 20, 200, 1);
+INSERT INTO public.product VALUES (3, 'Ball', 30, 300, 1);
 
+INSERT INTO public.product VALUES (4, 'Doll', 10, 100, 2);
+INSERT INTO public.product VALUES (5, 'Car', 20, 200, 2);
+INSERT INTO public.product VALUES (6, 'Ball', 30, 300, 2);
 
+INSERT INTO public.product VALUES (7, 'Doll', 10, 100, 3);
+INSERT INTO public.product VALUES (8, 'Car', 20, 200, 3);
+INSERT INTO public.product VALUES (9, 'Ball', 30, 300, 3);
 

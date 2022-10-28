@@ -6,7 +6,7 @@ async function authen(user, pass) {
     var shopID = 0;
     var userRole = "shop";
     const asc_query = {
-        text: "SELECT * FROM users WHERE name = $1 AND passwd = $2",
+        text: "SELECT * FROM users WHERE name = $1 AND password = $2",
         values: [user, pass]
     };
     var accountQuery = await pg_conn.query(asc_query);
