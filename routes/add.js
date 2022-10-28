@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var createProduct = require('../models/addProduct');
+let session;
 
 router.post('/add', async function (req, res, next) {
     let productName = req.body.name;
