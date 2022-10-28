@@ -4,9 +4,9 @@ var router = express.Router();
 var viewProduct = require('../models/viewProduct');
 
 router.get('/users', async function (req, res, next) {
-  let shopID = req.session.user.shop;
+  let idshop = req.session.user.shop;
   let username = req.session.user.username;
-  let productString = await viewProduct(shopID);
+  let productString = await viewProduct(idshop);
   if (username) {
     res.render('home', { name: username, products: productString });
   } else {
