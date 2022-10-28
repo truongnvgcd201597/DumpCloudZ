@@ -15,13 +15,12 @@ var addRouter = require('./routes/add');
 
 var app = express();
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'secret',
   resave: true,
   saveUninitialized: true,
-  cookie: { maxAge: 600000 }
+  cookie: { maxAge: 60000 },
 }));
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

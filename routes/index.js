@@ -1,14 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var authentication = require('../models/authenticate');
-var viewProduct = require('../models/viewProduct');
 var selectBox = require('../models/selectBox');
 var viewAdminProduct = require('../models/viewAdminProduct');
-var viewDetailProduct = require('../models/viewDetailProduct');
-var deleteProduct = require('../models/deleteProduct');
-var updateProduct = require('../models/updateProduct');
-var createProduct = require('../models/addProduct');
-let sessionData;;
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });

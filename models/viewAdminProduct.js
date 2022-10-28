@@ -8,7 +8,8 @@ async function viewAdminProduct(nameShop) {
         FROM product INNER JOIN shop ON product.shop = shop.id`,
     }
     else queryProducts = {
-        text: `SELECT * FROM product INNER JOIN shop ON product.shop = shop.id WHERE shop.name = $1`,
+        text: `SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.QUANTITY, PRODUCT.PRICE, PRODUCT.SHOP
+        FROM product INNER JOIN shop ON product.shop = shop.id WHERE shop.name = $1`,
         values: [nameShop]
     }
     let tableProductDisplay = `
@@ -16,7 +17,7 @@ async function viewAdminProduct(nameShop) {
     <tr> 
 `
     var getEntitiesQueries = await pg_conn.query(queryProducts);
-    let numOfCols = getEntitiesQueries.fields.length - 1;
+    let numOfCols = getEntitiesQueries.fields.length;
     for (let i = 0; i < numOfCols; i++) {
         tableProductDisplay += `<th> ${getEntitiesQueries.fields[i].name} </th>`;
     }

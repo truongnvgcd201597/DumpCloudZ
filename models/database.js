@@ -11,8 +11,5 @@ const pg_conn = new Pool({
     }
 })
 
-// pg_conn.query('SELECT * FROM shop', (err, res) => {
-//     console.log(err, res)
-//     pg_conn.end()
-// })
+
 module.exports = pg_conn;
